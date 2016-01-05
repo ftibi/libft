@@ -64,7 +64,8 @@ SRCS =	ft_atoi.c\
 		ft_lstdelfirst.c\
 		ft_lstdellast.c\
 		ft_lstfold.c\
-		ft_lstdelcmp.c
+		ft_lstdelcmp.c\
+		ft_strndup.c
 
 OBJS = $(SRCS:.c=.o)
 
