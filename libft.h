@@ -94,8 +94,5 @@ void				ft_lstdelcmp(t_list **begin, void (*del)(void *, size_t),
 						int(cmp)(void *));
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strend(char *str);
-<<<<<<< HEAD
-=======
 int					ft_pow(int x, int n);
->>>>>>> 4af248212f22a60609fc95c0076f8f2683c66fbb
 #endif
