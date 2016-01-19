@@ -6,18 +6,11 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:38:50 by tfolly            #+#    #+#             */
-/*   Updated: 2015/12/10 16:13:58 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/01/19 18:07:14 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static unsigned int		ft_pow(unsigned int x, unsigned int n)
-{
-	if (n == 0)
-		return (1);
-	return (x * ft_pow(x, n - 1));
-}
 
 static int				charness(unsigned int n)
 {
@@ -26,7 +19,7 @@ static int				charness(unsigned int n)
 	req = 1;
 	if (n >= 1000000000)
 		return (10);
-	while (n >= ft_pow(10, req))
+	while (n >= (unsigned int)ft_pow(10, req))
 	{
 		req++;
 	}
