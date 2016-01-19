@@ -6,7 +6,11 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:42:32 by tfolly            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2016/01/10 12:37:02 by tfolly           ###   ########.fr       */
+=======
+/*   Updated: 2016/01/19 18:05:41 by tfolly           ###   ########.fr       */
+>>>>>>> 4af248212f22a60609fc95c0076f8f2683c66fbb
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +94,8 @@ void				ft_lstdelcmp(t_list **begin, void (*del)(void *, size_t),
 						int(cmp)(void *));
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strend(char *str);
+<<<<<<< HEAD
+=======
+int					ft_pow(int x, int n);
+>>>>>>> 4af248212f22a60609fc95c0076f8f2683c66fbb
 #endif
