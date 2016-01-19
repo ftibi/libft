@@ -66,12 +66,9 @@ SRCS =	ft_atoi.c\
 		ft_lstfold.c\
 		ft_lstdelcmp.c\
 		ft_strndup.c\
-<<<<<<< HEAD
-		ft_strend.c
-=======
+		ft_strend.c\
 		ft_strend.c\
 		ft_pow.c
->>>>>>> 4af248212f22a60609fc95c0076f8f2683c66fbb
 
 OBJS = $(SRCS:.c=.o)
 
