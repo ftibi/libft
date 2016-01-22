@@ -6,13 +6,13 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 12:36:00 by tfolly            #+#    #+#             */
-/*   Updated: 2016/01/10 12:36:38 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/01/22 14:54:48 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strend(char	*str)
+char	*ft_strend(char *str)
 {
 	while (*str)
 		str++;
