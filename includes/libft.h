@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 11:42:32 by tfolly            #+#    #+#             */
-/*   Updated: 2016/01/19 18:40:44 by tfolly           ###   ########.fr       */
+/*   Created: 2016/01/22 14:55:31 by tfolly            #+#    #+#             */
+/*   Updated: 2016/01/22 14:55:33 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,5 @@ void				ft_lstdelcmp(t_list **begin, void (*del)(void *, size_t),
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strend(char *str);
 int					ft_pow(int x, int n);
+char				*ft_itoa_base(int nbr, unsigned int base);
 #endif

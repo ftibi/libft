@@ -82,7 +82,7 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 
 %.o: %.c $@
-	gcc -c -Wall -Wextra -Werror $<
+	gcc -c -Wall -Wextra -Werror -Iincludes $<
 
 clean :
 	rm -f $(OBJS)
