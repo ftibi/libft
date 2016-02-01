@@ -6,14 +6,14 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 17:59:34 by tfolly            #+#    #+#             */
-/*   Updated: 2016/01/22 18:43:36 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 12:05:29 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_init_itoa(unsigned int nb, unsigned int base,
-		unsigned int *pow, int signe)
+static char		*ft_init_itoa(unsigned long long nb, unsigned int base,
+		unsigned long long *pow)
 {
 	char	*ret;
 
@@ -23,23 +23,13 @@ static char		*ft_init_itoa(unsigned int nb, unsigned int base,
 		nb /= base;
 		(*pow)++;
 	}
-	if (!(ret = ft_strnew(*pow + (signe == -1))))
+	if (!(ret = ft_strnew(*pow)))
 		return (NULL);
 	*pow = ft_pow(base, *pow - 1);
 	return (ret);
 }
 
-static char		*ft_signe_itoa(int signe, char *ret)
-{
-	if (signe == -1)
-	{
-		*ret = '-';
-		ret++;
-	}
-	return (ret);
-}
-
-static char		ft_char_itoa(unsigned int pow, int nb)
+static char		ft_char_itoa(unsigned long long pow, unsigned long long nb)
 {
 	char	ret;
 
@@ -51,17 +41,15 @@ static char		ft_char_itoa(unsigned int pow, int nb)
 	return (ret);
 }
 
-char			*ft_uitoa_base(unsigned int nb, unsigned int base)
+char			*ft_uitoa_base(unsigned long long nb, unsigned int base)
 {
 	char			*ret;
 	char			*save;
-	int				signe;
-	unsigned int	pow;
+	unsigned long long	pow;
 
-	if (!(ret = ft_init_itoa(nb, base, &pow, signe)))
+	if (!(ret = ft_init_itoa(nb, base, &pow)))
 		return (NULL);
 	save = ret;
-	ret = ft_signe_itoa(signe, ret);
 	while (pow > 0)
 	{
 		*ret = ft_char_itoa(pow, nb);

@@ -6,7 +6,7 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:55:31 by tfolly            #+#    #+#             */
-/*   Updated: 2016/01/22 18:43:54 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 12:18:49 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,5 @@ char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strend(char *str);
 int					ft_pow(int x, int n);
 char				*ft_itoa_base(int nbr, unsigned int base);
-char				*ft_uitoa_base(unsigned int nbr, unsigned int base);
+char				*ft_uitoa_base(unsigned long long nbr, unsigned int base);
 #endif
