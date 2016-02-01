@@ -6,7 +6,7 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:53:36 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/01 13:01:47 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 13:24:30 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ unsigned long long		ft_ulpow(unsigned long long x, int n)
 {
 	if (n == 0)
 		return (1);
-	return (x * ft_pow(x, n - 1));
+	return (x * ft_ulpow(x, n - 1));
 }
