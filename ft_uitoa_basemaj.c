@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_uitoa_basemaj.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 17:59:34 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/01 15:49:05 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 16:24:55 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_init_itoa(unsigned int nb, unsigned int base,
-		unsigned int *pow, int signe)
+static char		*ft_init_itoa(unsigned long long nb, unsigned int base,
+		unsigned long long *pow)
 {
 	char	*ret;
 
@@ -23,51 +23,33 @@ static char		*ft_init_itoa(unsigned int nb, unsigned int base,
 		nb /= base;
 		(*pow)++;
 	}
-	if (!(ret = ft_strnew(*pow + (signe == -1))))
+	if (!(ret = ft_strnew(*pow)))
 		return (NULL);
-	*pow = ft_pow(base, *pow - 1);
+	*pow = ft_ulpow(base, *pow - 1);
 	return (ret);
 }
 
-static char		*ft_signe_itoa(int signe, char *ret)
-{
-	if (signe == -1)
-	{
-		*ret = '-';
-		ret++;
-	}
-	return (ret);
-}
-
-static char		ft_char_itoa(unsigned int pow, int nb)
+static char		ft_char_itoa(unsigned long long pow, unsigned long long nb)
 {
 	char	ret;
 
 	ret = nb / pow;
 	if (ret >= 10)
-		ret += 'a' - 10;
+		ret += 'A' - 10;
 	else
 		ret += '0';
 	return (ret);
 }
 
-char			*ft_itoa_base(int nbr, unsigned int base)
+char			*ft_uitoa_basemaj(unsigned long long nb, unsigned int base)
 {
-	char			*ret;
-	char			*save;
-	int				signe;
-	unsigned int	pow;
-	unsigned int	nb;
+	char				*ret;
+	char				*save;
+	unsigned long long	pow;
 
-	signe = (nbr >= 0) ? 1 : -1;
-	if (signe == -1)
-		nb = -1 * nbr;
-	else
-		nb = nbr;
-	if (!(ret = ft_init_itoa(nb, base, &pow, signe)))
+	if (!(ret = ft_init_itoa(nb, base, &pow)))
 		return (NULL);
 	save = ret;
-	ret = ft_signe_itoa(signe, ret);
 	while (pow > 0)
 	{
 		*ret = ft_char_itoa(pow, nb);

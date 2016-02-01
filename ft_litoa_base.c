@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_litoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 17:59:34 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/01 15:49:05 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 15:58:41 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_init_itoa(unsigned int nb, unsigned int base,
-		unsigned int *pow, int signe)
+static char		*ft_init_itoa(unsigned long long nb, unsigned int base,
+		unsigned long long *pow, int signe)
 {
 	char	*ret;
 
@@ -25,7 +25,7 @@ static char		*ft_init_itoa(unsigned int nb, unsigned int base,
 	}
 	if (!(ret = ft_strnew(*pow + (signe == -1))))
 		return (NULL);
-	*pow = ft_pow(base, *pow - 1);
+	*pow = ft_ulpow(base, *pow - 1);
 	return (ret);
 }
 
@@ -39,7 +39,7 @@ static char		*ft_signe_itoa(int signe, char *ret)
 	return (ret);
 }
 
-static char		ft_char_itoa(unsigned int pow, int nb)
+static char		ft_char_itoa(unsigned long long pow, long long nb)
 {
 	char	ret;
 
@@ -51,13 +51,13 @@ static char		ft_char_itoa(unsigned int pow, int nb)
 	return (ret);
 }
 
-char			*ft_itoa_base(int nbr, unsigned int base)
+char			*ft_litoa_base(long long nbr, unsigned int base)
 {
-	char			*ret;
-	char			*save;
-	int				signe;
-	unsigned int	pow;
-	unsigned int	nb;
+	char				*ret;
+	char				*save;
+	int					signe;
+	unsigned long long	pow;
+	unsigned long long	nb;
 
 	signe = (nbr >= 0) ? 1 : -1;
 	if (signe == -1)
