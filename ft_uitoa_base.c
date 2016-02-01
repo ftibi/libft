@@ -6,7 +6,7 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 17:59:34 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/01 12:05:29 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/01 13:02:42 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static char		*ft_init_itoa(unsigned long long nb, unsigned int base,
 	}
 	if (!(ret = ft_strnew(*pow)))
 		return (NULL);
-	*pow = ft_pow(base, *pow - 1);
+	*pow = ft_ulpow(base, *pow - 1);
 	return (ret);
 }
 
