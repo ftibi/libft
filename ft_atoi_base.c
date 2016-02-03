@@ -6,7 +6,7 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/03 12:16:52 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/03 12:44:55 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/02/03 13:32:19 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** Ca suffit pour lutilisation sur des binaires
 */
 
-int	ft_atoi_base(char *str, int base)
+unsigned long	ft_atoi_base(char *str, int base)
 {
-	int	pow;
-	int	res;
+	int				pow;
+	unsigned long	res;
 
 	pow = ft_strlen(str) - 1;
 	res = 0;
