@@ -73,7 +73,8 @@ SRCS =	ft_atoi.c\
 		ft_uitoa_base.c\
 		ft_ulpow.c\
 		ft_litoa_base.c\
-		ft_uitoa_basemaj.c
+		ft_uitoa_basemaj.c\
+		ft_atoi_base.c
 
 OBJS = $(SRCS:.c=.o)
 
