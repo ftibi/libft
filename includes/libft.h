@@ -6,7 +6,7 @@
 /*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:55:31 by tfolly            #+#    #+#             */
-/*   Updated: 2016/02/03 12:27:40 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/04/10 15:06:17 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,15 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# define BUFF_SIZE 2
 
+typedef struct		s_stock
+{
+	char			*str;
+	int				fd;
+	int				status;
+	struct s_stock	*next;
+}					t_stock;
 typedef struct		s_list
 {
 	void			*content;
@@ -96,5 +104,6 @@ char				*ft_uitoa_base(unsigned long long nbr, unsigned int base);
 char				*ft_uitoa_basemaj(unsigned long long nbr, unsigned int base);
 char				*ft_litoa_base(long long nbr, unsigned int base);
 unsigned long long	ft_ulpow(unsigned long long nb, int base);
-int					ft_atoi_base(char *str, int base);
+unsigned long		ft_atoi_base(char *str, int base);
+int					get_next_line(int const fd, char **line);
 #endif
