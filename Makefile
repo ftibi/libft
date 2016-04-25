@@ -75,7 +75,8 @@ SRCS =	ft_atoi.c\
 		ft_litoa_base.c\
 		ft_uitoa_basemaj.c\
 		ft_atoi_base.c\
-		get_next_line.c
+		get_next_line.c\
+		ft_putnbendl.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -87,7 +88,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-%.o: %.c $@
+%.o: %.c
 	gcc -c -Wall -Wextra -Werror -Iincludes $<
 
 clean :
