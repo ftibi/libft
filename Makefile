@@ -93,11 +93,16 @@ $(NAME): $(OBJS)
 
 clean :
 	rm -f $(OBJS)
+	make clean -C ./ft_printf
 
 fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
+
+printf :
+	make -C ./ft_printf
+	mv ./ft_printf/libftprintf.a $(NAME)
 
 test : 
 	gcc -Wall -Wextra -Werror $(SRCS) test_ft.c
