@@ -1,6 +1,8 @@
 NAME = libft.a 
 
-SRCS =	ft_atoi.c\
+SRC_PATH = ./sources
+
+SRC_NAME =	ft_atoi.c\
 		ft_bzero.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
@@ -78,6 +80,8 @@ SRCS =	ft_atoi.c\
 		get_next_line.c\
 		ft_putnbendl.c
 
+SRCS = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
+
 OBJS = $(SRCS:.c=.o)
 
 .PHONY: all, clean, fclean, re
@@ -88,7 +92,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-%.o: %.c
+$(SRC_PATH)%.o: $(SRC_PATH)%.c
 	gcc -c -Wall -Wextra -Werror -Iincludes $<
 
 clean :

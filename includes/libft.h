@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:55:31 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/11 15:25:36 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/06/28 14:59:04 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # define BUFF_SIZE 2
 
+int					ft_printf(const char *format, ...);
 typedef struct		s_stock
 {
 	char			*str;
