@@ -6,11 +6,11 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 14:36:00 by tfolly            #+#    #+#             */
-/*   Updated: 2016/11/28 14:36:07 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/11/28 14:42:30 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isnumber(char *str)
 {
