@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:55:31 by tfolly            #+#    #+#             */
-/*   Updated: 2016/06/28 14:59:04 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/11/28 14:36:33 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,5 @@ unsigned long long	ft_ulpow(unsigned long long nb, int base);
 unsigned long		ft_atoi_base(char *str, int base);
 int					get_next_line(int const fd, char **line);
 void				ft_putnbendl(int nb);
+int					ft_isnumber(char *str);
 #endif

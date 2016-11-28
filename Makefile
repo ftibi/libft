@@ -1,4 +1,4 @@
-NAME = libft.a 
+NAME = libft.a
 
 SRC_PATH = ./sources
 
@@ -78,7 +78,8 @@ SRC_NAME =	ft_atoi.c\
 		ft_uitoa_basemaj.c\
 		ft_atoi_base.c\
 		get_next_line.c\
-		ft_putnbendl.c
+		ft_putnbendl.c\
+		ft_isnumber.c
 
 SRCS = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 
@@ -108,13 +109,11 @@ printf :
 	make -C ./ft_printf
 	mv ./ft_printf/libftprintf.a $(NAME)
 
-test : 
+test :
 	gcc -Wall -Wextra -Werror $(SRCS) test_ft.c
 
 norm :
 	norminette $(SRCS) libft.h
 
 maintest : all
-	gcc main.c -I. libft.a 
-
-
+	gcc main.c -I. libft.a
