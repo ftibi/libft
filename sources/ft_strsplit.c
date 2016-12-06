@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfolly <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:56:57 by tfolly            #+#    #+#             */
-/*   Updated: 2016/04/23 17:36:48 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/12/06 16:03:37 by thibaultfolly    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char		*next_word(char const *s, char c)
 {
 	while (*s && *s == c)
 		s++;
-	return ((char*)s);
+	return (s);
 }
 
 static int		len_word(char const *s, char c)
