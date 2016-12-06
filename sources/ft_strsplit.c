@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:56:57 by tfolly            #+#    #+#             */
-/*   Updated: 2016/12/06 16:11:26 by thibaultfolly    ###   ########.fr       */
+/*   Updated: 2016/12/06 16:13:52 by thibaultfolly    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static int		nbr_words(char const *s, char c)
 	i = 0;
 	nb = 0;
 	mot = 0;
-	ft_putendl("nbr_words");
 	while (s[i] != '\0')
 	{
 		if (mot == 0 && s[i] != c)
@@ -35,17 +34,13 @@ static int		nbr_words(char const *s, char c)
 		}
 		i++;
 	}
-	ft_putendl("fin nbr_words");
 	return (nb);
 }
 
 static char		*next_word(char const *s, char c)
 {
-	ft_putendl("next_word");
-
 	while (*s && *s == c)
 		s++;
-	ft_putendl("fin next_word");
 	return ((char*)s);
 }
 
@@ -53,14 +48,12 @@ static int		len_word(char const *s, char c)
 {
 	int len;
 
-	ft_putendl("len_word");
 	len = 0;
-	while (*s != c)
+	while (*s && *s != c)
 	{
 		s++;
 		len++;
 	}
-	ft_putendl("fin len_word");
 	return (len);
 }
 
